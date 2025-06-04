@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Function Types</title>
+</head>
+<body>
+  <h1>JavaScript Function Examples</h1>
+
+  <script>
+    // 1. Named Function
+    function greet() {
+      console.log("Hello from a named function!");
+    }
+    greet();
+
+    // 2. Anonymous Function (assigned to a variable)
+    const anonFunc = function() {
+      console.log("Hello from an anonymous function!");
+    };
+    anonFunc();
+
+    // 3. Arrow Function
+    const arrowFunc = () => {
+      console.log("Hello from an arrow function!");
+    };
+    arrowFunc();
+
+    // 4. Callback Function
+    function processUserInput(callback) {
+      const name = "Alice";
+      callback(name);
+    }
+    processUserInput(function(name) {
+      console.log("Hello " + name + " from a callback function!");
+    });
+
+    // 5. Higher-Order Function
+    function hofExample(func) {
+      console.log("Calling the function passed as an argument:");
+      func();
+    }
+    hofExample(() => console.log("Hello from a function inside a HOF!"));
+
+    // 6. IIFE (Immediately Invoked Function Expression)
+    (function() {
+      console.log("Hello from an IIFE!");
+    })();
+  </script>
+</body>
+</html>
